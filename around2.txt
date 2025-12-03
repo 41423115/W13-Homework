@@ -1,0 +1,26 @@
+def move_around_world():
+    # Move Reeborg in counter-clockwise direction around the world
+    while True:
+        # Check if we are at the starting position (when facing the original direction)
+            
+
+        # If there's an obstacle, check for an edge and make adjustments
+        if right_is_clear():
+            turn_left()
+            turn_left()
+            turn_left()
+            move()
+            put()  # 放置標記
+        
+        # Check if the path is clear and move
+        if front_is_clear():
+            move()
+            put()  # 放置標記
+     
+        # If we face a wall, turn left to go around the corner
+        elif wall_in_front():
+            turn_left()
+            
+        
+# Main execution starts here
+move_around_world()
